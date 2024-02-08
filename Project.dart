@@ -39,7 +39,7 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             Container(
               height: 300.0,
-              child: Image.asset('images/final.png'),
+              child: Image.asset('images/giris.png'),
             ),
             SizedBox(height: 16.0),
             Container(
@@ -157,16 +157,16 @@ class AnaSayfa extends StatelessWidget {
 
   final List<Product> productsPage1 = [
     Product('Ürün Adı 1', '\$19.99', 'images/final1.jpeg'),
-    Product('Ürün Adı 2', '\$24.99', 'images/final2.jpeg'),
+    Product('Ürün Adı 2', '\$24.99', 'images/fin2.jpeg'),
     Product('Ürün Adı 3', '\$29.99', 'images/final3.jpeg'),
-    Product('Ürün Adı 4', '\$39.99', 'images/product4.png'),
+    Product('Ürün Adı 4', '\$39.99', 'images/final4.jpeg'),
   ];
 
   final List<Product> productsPage2 = [
-    Product('Ürün Adı 5', '\$49.99', 'images/product5.png'),
-    Product('Ürün Adı 6', '\$59.99', 'images/product6.png'),
-    Product('Ürün Adı 7', '\$69.99', 'images/product7.png'),
-    Product('Ürün Adı 8', '\$79.99', 'images/product8.png'),
+    Product('Ürün Adı 5', '\$49.99', 'images/final5.jpeg'),
+    Product('Ürün Adı 6', '\$59.99', 'images/final6.jpeg'),
+    Product('Ürün Adı 7', '\$69.99', 'images/final7.jpeg'),
+    Product('Ürün Adı 8', '\$79.99', 'images/final8.jpeg'),
   ];
 
   @override
@@ -453,13 +453,13 @@ class UrunlerimSayfasi extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             buildProductCard(
-              'images/product1.png',
+              'images/final9.jpeg',
               'ESD Eğik Uçlu Cımbız',
               '174,99 TL',
             ),
             SizedBox(height: 16.0),
             buildProductCard(
-              'images/product2.png',
+              'images/final10.jpeg',
               'UPX 803L Akrobat LED 5X Büyüteç',
               '890,90 TL',
             ),
@@ -592,6 +592,11 @@ class YeniUrunPaylasSayfasi extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 // Paylaş butonuna tıklama işlemi
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('Ürün başarıyla paylaşıldı!'),
+                  ),
+                );
               },
               style: ElevatedButton.styleFrom(
                 primary: Color(0xFFB8552B),
@@ -633,7 +638,7 @@ class UrunTalepleriSayfasi extends StatelessWidget {
             CircleAvatar(
               radius: 50.0,
               backgroundImage: AssetImage(
-                  'images/profile_picture.jpg'), // Profil fotoğrafı buraya eklenecek
+                  'images/final11.jpeg'), // Profil fotoğrafı buraya eklenecek
             ),
             SizedBox(height: 16.0),
             AliciBilgileriWidget(),
@@ -688,8 +693,8 @@ class AliciBilgileriWidget extends StatelessWidget {
           ),
         ),
         SizedBox(height: 8.0),
-        Text('Adı Soyadı: Ceren Çınarlı'),
-        Text('Mail Adresi: crncnrl@gmail.com'),
+        Text('Adı Soyadı: Abdullah Alsabouni'),
+        Text('Mail Adresi: abdullah24sabouni@gmail.com'),
       ],
     );
   }
